@@ -1,0 +1,33 @@
+eureka:
+  client:
+    service-url:
+     defaultZone: http://127.0.0.1:8761/eureka/
+  #优先使用IP地址注册
+  instance:
+      prefer-ip-address: true
+
+logging:
+  level:
+    com.ozx.ozxshopservicemember.mapper: DEBUG
+
+spring:
+###数据库相关连接
+  datasource:
+    username: root
+    password: rootroot
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3308/shop_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  application:
+    name: @artifactId@
+server:
+  port: 8000
+swagger:
+  base-package: com.ozx.ozxshopservicemember.controller
+  title: SpringBoot2.x构建集成swagger2项目
+  description: API文档自动生成
+  version: 1.1
+  terms-of-service-url: https://github.com/OGxin
+  contact:
+    name: Gxin
+    email: 7798855839@qq.com
+    url: https://github.com/OGxin

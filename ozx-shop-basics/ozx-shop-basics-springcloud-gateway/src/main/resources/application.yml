@@ -1,0 +1,36 @@
+server:
+  port: 8861
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    gateway:
+      discovery:
+        locator:
+# Gateway开启服务注册和发现功能
+          enabled: true
+# 将请求路径上的服务名配置为小写
+          lowerCaseServiceId: true
+      routes:
+        - id: ozx-shop-service-weixin                     #网关路由
+          uri: lb://OZX-SHOP-SERVICE-WEIXIN
+          predicates:
+            - Path=/wx/**
+#  StripPrefix的filter在转发之前将/wx去掉
+          filters:
+            - StripPrefix=1
+#            - SwaggerHeaderFilter
+        - id: ozx-shop-service-member
+          uri: lb://OZX-SHOP-SERVICE-MEMBER
+          predicates:
+            - Path=/mem/**
+          #  StripPrefix的filter在转发之前将/wx去掉
+          filters:
+            - StripPrefix=1
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/

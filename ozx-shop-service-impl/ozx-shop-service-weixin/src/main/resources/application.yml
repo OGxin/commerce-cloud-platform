@@ -1,0 +1,27 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: @artifactId@
+eureka:
+  client:
+    service-url:
+     defaultZone: http://127.0.0.1:8761/eureka/
+#优先使用IP地址注册
+  instance:
+    prefer-ip-address: true
+swagger:
+  base-package: com.ozx.ozxshopserviceweixin.controller
+  title: SpringBoot2.x构建集成swagger2项目
+  description: API文档自动生成
+  version: 1.1
+  terms-of-service-url: https://github.com/OGxin
+  contact:
+    name: Gxin
+    email: 7798855839@qq.com
+    url: https://github.com/OGxin
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
