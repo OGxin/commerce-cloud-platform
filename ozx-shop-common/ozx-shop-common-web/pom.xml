@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ozx</groupId>
+		<artifactId>ozx-shop-common</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.ozx</groupId>
+	<artifactId>ozx-shop-common-web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ozx-shop-common-web</name>
+
+
+	<dependencies>
+        <!--<dependency>-->
+            <!--<groupId>nl.bitwalker</groupId>-->
+            <!--<artifactId>UserAgentUtils</artifactId>-->
+            <!--<version>1.2.4</version>-->
+        <!--</dependency>-->
+		<dependency>
+			<groupId>eu.bitwalker</groupId>
+			<artifactId>UserAgentUtils</artifactId>
+			<version>1.20</version>
+		</dependency>
+        <dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-commom-base-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.ozx</groupId>-->
+			<!--<artifactId>ozx-shop-service-api-member</artifactId>-->
+			<!--<version>0.0.1-SNAPSHOT</version>-->
+		<!--</dependency>-->
+
+	</dependencies>
+
+
+</project>
