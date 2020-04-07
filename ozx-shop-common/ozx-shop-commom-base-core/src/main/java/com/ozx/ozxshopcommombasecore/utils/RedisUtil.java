@@ -1,8 +1,8 @@
-package com.ozx.ozxshopcommon.utils;
+package com.ozx.ozxshopcommombasecore.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
@@ -41,7 +41,40 @@ public class RedisUtil {
         return stringRedisTemplate.opsForValue().get(key);
     }
 
+    /**
+     * 根据key删除redis储存的key-value
+     * @param key
+     * @return
+     */
     public boolean delete(String key){
         return stringRedisTemplate.delete(key);
+    }
+
+    /**
+     * 开启redis事务
+     */
+    public void begin(){
+        /**
+         * 开启redis事务权限
+         */
+        stringRedisTemplate.setEnableTransactionSupport(true);
+        /**
+         * 开启事务
+         */
+        stringRedisTemplate.multi();
+    }
+
+    /**
+     * 回滚redis事务
+     */
+    public void rollback(){
+        stringRedisTemplate.discard();
+    }
+
+    /**
+     * 成功提交事务
+     */
+    public void exec(){
+        stringRedisTemplate.exec();
     }
 }

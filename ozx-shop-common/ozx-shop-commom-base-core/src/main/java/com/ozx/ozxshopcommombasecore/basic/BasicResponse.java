@@ -1,4 +1,4 @@
-package com.ozx.ozxshopcommon.basic;
+package com.ozx.ozxshopcommombasecore.basic;
 
 import lombok.Data;
 

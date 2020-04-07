@@ -1,6 +1,6 @@
-package com.ozx.ozxshopcommon.basic;
+package com.ozx.ozxshopcommombasecore.basic;
 
-import com.ozx.ozxshopcommon.constants.Constants;
+import com.ozx.ozxshopcommombasecore.constants.Constants;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
@@ -58,4 +58,14 @@ public class BasicApiService<T> {
     public BasicResponse<T> setResultSuccess(String msg){
        return setResult(Constants.HTTP_RES_CODE_200,msg,null);
     }
+
+    /**
+     * 判断数据库执行是否成功
+     * @param result
+     * @return
+     */
+    public Boolean toDaoResult(int result){
+        return result > 0 ? true:false;
+    }
+
 }

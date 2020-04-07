@@ -1,4 +1,4 @@
-package com.ozx.ozxshopcommon.utils;
+package com.ozx.ozxshopcommombasecore.utils;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.ozx.ozxshopcommon.bean;
+package com.ozx.ozxshopcommombasecore.bean;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
