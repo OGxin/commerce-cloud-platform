@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ozx</groupId>
+		<artifactId>meite-shop-basics</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.ozx</groupId>
+	<artifactId>ozx-shop-basics-xxl-sso-server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ozx-shop-basics-xxl-sso-server</name>
+
+	<dependencies>
+		<!--Spring Boot整合freemarker-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.xuxueli</groupId>
+			<artifactId>xxl-sso-core</artifactId>
+			<version>1.1.1-SNAPSHOT</version>
+		</dependency>
+		<!--Spring Boot Feign组件-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-service-api-member</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-api-member-dto</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-commom-base-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-common-web</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
