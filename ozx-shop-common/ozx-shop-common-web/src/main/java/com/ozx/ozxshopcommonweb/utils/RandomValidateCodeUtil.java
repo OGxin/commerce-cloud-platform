@@ -1,5 +1,6 @@
 package com.ozx.ozxshopcommonweb.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ import javax.servlet.http.HttpSession;
  * @Version： 1.0
  **/
 @Component
+@Slf4j
 public class RandomValidateCodeUtil {
     public static final String RANDOMCODEKEY = "RANDOMVALIDATECODEKEY";// 放到session中的key
     private String randString = "0123456789";// 随机产生只有数字的字符串 private String
@@ -101,6 +103,7 @@ public class RandomValidateCodeUtil {
         randomString += rand;
         g.translate(random.nextInt(3), random.nextInt(3));
         g.drawString(rand, 13 * i, 16);
+        log.info("randomString:{}",randomString);
         return randomString;
     }
 

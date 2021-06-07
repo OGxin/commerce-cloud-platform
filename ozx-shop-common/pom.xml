@@ -11,6 +11,7 @@
 	<artifactId>ozx-shop-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ozx-shop-common</name>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>ozx-shop-commom-base-core</module>

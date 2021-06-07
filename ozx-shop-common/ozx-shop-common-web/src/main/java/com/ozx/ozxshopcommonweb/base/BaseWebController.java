@@ -1,5 +1,6 @@
 package com.ozx.ozxshopcommonweb.base;
 
+import cn.hutool.core.util.StrUtil;
 import com.ozx.ozxshopcommombasecore.basic.BasicResponse;
 import com.ozx.ozxshopcommombasecore.constants.Constants;
 import eu.bitwalker.useragentutils.Browser;
@@ -18,7 +19,8 @@ import javax.servlet.http.HttpServletRequest;
  **/
 public class BaseWebController {
 
-    private static final String ERROR_FTL = "500.ftl";
+
+
 
     public Boolean isSuccess(BasicResponse<?> basicResponse) {
         if (basicResponse == null) {
@@ -39,7 +41,28 @@ public class BaseWebController {
         return info;
     }
 
-    public void setErrorMsg(Model model,String errMsg){
-        model.addAttribute("error",errMsg);
+    protected <T> BasicResponse<T> message(Integer code,String message,T data){
+        BasicResponse<T> response = new BasicResponse<>();
+        response.setCode(code);
+        response.setMsg(message);
+        if (data != null) {
+            response.setData(data);
+        }
+        return response;
+    }
+
+    protected <T> BasicResponse<T> success(){
+        return message(Constants.HTTP_RES_CODE_200,Constants.HTTP_RES_CODE_200_VALUE,null);
+    }
+
+    protected <T> BasicResponse<T> success(T data){
+        return message(Constants.HTTP_RES_CODE_200,Constants.HTTP_RES_CODE_200_VALUE,data);
+    }
+
+    protected <T> BasicResponse<T> failure(){
+        return message(Constants.HTTP_RES_CODE_500,Constants.HTTP_RES_CODE_500_VALUE,null);
+    }
+    protected <T> BasicResponse<T> failure(T data){
+        return message(Constants.HTTP_RES_CODE_500,Constants.HTTP_RES_CODE_500_VALUE,data);
     }
 }
