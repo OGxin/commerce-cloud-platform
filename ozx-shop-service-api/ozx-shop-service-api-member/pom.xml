@@ -12,45 +12,30 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ozx-shop-service-api-member</name>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.ozx</groupId>
-			<artifactId>ozx-shop-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>com.ozx</groupId>
 			<artifactId>ozx-shop-api-member-dto</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency><!--添加Swagger依赖 -->
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
-		</dependency>
-		<dependency><!--添加Swagger-UI依赖 -->
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
-		</dependency>
+
 		<!--SpringBoot-整合Web组件-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-common-web</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-commom-base-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

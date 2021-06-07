@@ -11,6 +11,7 @@
 	<artifactId>ozx-shop-service-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ozx-shop-service-api</name>
+	<packaging>pom</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -20,17 +21,6 @@
 		<module>ozx-shop-service-api-member</module>
 		<module>ozx-shop-service-api-weixin</module>
 	</modules>
-
-
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 	<repositories>
 		<repository>

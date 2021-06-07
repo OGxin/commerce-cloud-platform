@@ -1,0 +1,11 @@
+swagger:
+  base-package: com.ozx.ozxshopserviceapimember.service
+  title: SpringBoot2.x构建集成swagger2项目
+  description: API文档自动生成
+  version: 1.1
+  terms-of-service-url: https://github.com/OGxin
+  contact:
+    name: Gxin
+    email: 7798855839@qq.com
+    url: https://github.com/OGxin
+

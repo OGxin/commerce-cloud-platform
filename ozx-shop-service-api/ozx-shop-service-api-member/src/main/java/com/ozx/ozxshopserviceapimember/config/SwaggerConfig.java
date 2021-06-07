@@ -1,10 +1,9 @@
-package com.ozx.ozxshopservicemember.config;
+package com.ozx.ozxshopserviceapimember.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -25,16 +24,17 @@ public class SwaggerConfig {
     @Bean
     public Docket createRestApi(){
             return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
-                    .apis(RequestHandlerSelectors.basePackage("com.ozx.ozxshopservicemember.controller"))
+//                    .apis(RequestHandlerSelectors.basePackage("com.ozx.ozxshopserviceapimember.service"))
+//                    .apis(RequestHandlerSelectors.withClassAnnotation(ApiOperation.class))
                     .paths(PathSelectors.any()).build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Swagger API")
                     .description("接口文档")
-                        .termsOfServiceUrl("")
-                            .contact(new Contact("ozx","","779855839@qq.com"))
-                                .version("1.0")
+                        .termsOfServiceUrl("https://github.com/OGxin")
+                            .contact(new Contact("Gxin","https://github.com/OGxin","779855839@qq.com"))
+                                .version("2.0")
                                     .build();
     }
 }
