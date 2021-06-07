@@ -12,9 +12,12 @@
     <artifactId>commerce-cloud-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>commerce-cloud-platform</name>
+    <packaging>pom</packaging>
+
 
 
     <modules>
+        <module>ozx-shop-api-dto</module>
         <module>ozx-shop-basics</module>
         <module>ozx-shop-common</module>
         <module>ozx-shop-portal</module>
@@ -44,15 +47,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>-->
+        <!--</dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <version>1.16.20</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -88,7 +91,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-        <!--测试依赖-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.3.5</version>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>
@@ -157,6 +164,9 @@
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
     </repositories>
+
+
+
 
 
     <!--<dependencies>-->
@@ -231,13 +241,8 @@
     <!--</repository>-->
     <!--</repositories>-->
 
-    <!--<build>-->
-    <!--<plugins>-->
-    <!--<plugin>-->
-    <!--<groupId>org.springframework.boot</groupId>-->
-    <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-    <!--</plugin>-->
-    <!--</plugins>-->
-    <!--</build>-->
+
+
+
 
 </project>

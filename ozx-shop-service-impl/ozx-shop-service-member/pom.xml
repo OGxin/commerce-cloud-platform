@@ -12,33 +12,31 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ozx-shop-service-member</name>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+
 
 	<dependencies>
-		<dependency><!--添加Swagger依赖 -->
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.7.0</version>
-		</dependency>
-		<dependency><!--添加Swagger-UI依赖 -->
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.7.0</version>
-		</dependency>
-		<!--添加以下配置，java.lang.NumberFormatException: For input string: ""
-		解决Swagger2.9.2的NumberFormatException问题-->
-		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>1.5.22</version>
-		</dependency>
-		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-models</artifactId>
-			<version>1.5.22</version>
-		</dependency>
+<!--		<dependency>&lt;!&ndash;添加Swagger依赖 &ndash;&gt;-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger2</artifactId>-->
+<!--			<version>2.7.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>&lt;!&ndash;添加Swagger-UI依赖 &ndash;&gt;-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger-ui</artifactId>-->
+<!--			<version>2.7.0</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash;添加以下配置，java.lang.NumberFormatException: For input string: ""-->
+<!--		解决Swagger2.9.2的NumberFormatException问题&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>io.swagger</groupId>-->
+<!--			<artifactId>swagger-annotations</artifactId>-->
+<!--			<version>1.5.22</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>io.swagger</groupId>-->
+<!--			<artifactId>swagger-models</artifactId>-->
+<!--			<version>1.5.22</version>-->
+<!--		</dependency>-->
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -56,11 +54,6 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ozx</groupId>
-			<artifactId>ozx-shop-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 		<groupId>org.mybatis.spring.boot</groupId>
 		<artifactId>mybatis-spring-boot-starter</artifactId>
 		<version>2.1.1</version>
@@ -69,6 +62,24 @@
 		<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- 集成redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ozx</groupId>
+			<artifactId>ozx-shop-commom-base-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

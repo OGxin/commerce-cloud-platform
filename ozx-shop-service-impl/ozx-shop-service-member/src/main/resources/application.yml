@@ -15,14 +15,27 @@ spring:
   datasource:
     username: root
     password: rootroot
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3308/shop_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
   application:
     name: @artifactId@
+  redis:
+    port: 6379
+    database: 0
+    host: 127.0.0.1
+    password:
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1
+        min-idle: 1
+        max-idle: 100
+  main:
+    allow-bean-definition-overriding: true
 server:
   port: 8000
 swagger:
-  base-package: com.ozx.ozxshopservicemember.controller
+  templates.base-package: com.ozx.ozxshopservicemember.controller
   title: SpringBoot2.x构建集成swagger2项目
   description: API文档自动生成
   version: 1.1
@@ -31,3 +44,7 @@ swagger:
     name: Gxin
     email: 7798855839@qq.com
     url: https://github.com/OGxin
+management:
+  endpoint:
+    health:
+      show-details: always
