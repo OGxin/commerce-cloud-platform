@@ -23,7 +23,7 @@ public class GenerateToken {
 	 * @return 返回token
 	 */
 	public String createToken(String keyPrefix, String redisValue) {
-		return createToken(keyPrefix, redisValue, null);
+		return createToken(keyPrefix, redisValue, 3600L);
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class GenerateToken {
 	 */
 	public String createToken(String keyPrefix, String redisValue, Long time) {
 		if (StringUtils.isEmpty(redisValue)) {
-			new Exception("redisValue Not nul");
+			new Exception("redisValue Not null");
 		}
 		String token = keyPrefix + UUID.randomUUID().toString().replace("-", "");
 		redisUtil.setString(token, redisValue, time);

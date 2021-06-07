@@ -24,4 +24,6 @@ public class BasicResponse<T> {
         this.msg=msg;
         this.data=data;
     }
+
+
 }

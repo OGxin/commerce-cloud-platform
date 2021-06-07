@@ -61,6 +61,10 @@ public class RedisDataResourceTransaction {
             throw new Exception("transactionStatus 不能为空");
         }
         dataSourceTransactionManager.rollback(transactionStatus);
+        /**
+         * 回滚redis事务
+         */
+//        redisUtil.rollback();
     }
 
 
