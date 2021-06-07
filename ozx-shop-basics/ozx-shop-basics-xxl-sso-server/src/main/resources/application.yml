@@ -1,0 +1,31 @@
+
+spring:
+  freemarker:
+    settings:
+      number_format: 0.##########
+    charset: UTF-8
+    request-context-attribute: request
+    templateLoaderPath: classpath:/templates/
+    suffix: .ftl
+  resources:
+    static-locations: classpath:/static/
+  mvc:
+    static-path-pattern: /static/**
+  application:
+    name: @artifactId@
+server:
+  port: 8080
+  servlet:
+    context-path: /xxl-sso-server
+xxl:
+  sso:
+    redis:
+      address: redis://127.0.0.1:6379
+      expire:
+        minute: 1440
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+
