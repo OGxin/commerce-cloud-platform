@@ -11,11 +11,12 @@
 	<artifactId>meite-shop-basics</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ozx-shop-basics</name>
-
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>ozx-shop-basics-springcloud-eureka</module>
 		<module>ozx-shop-basics-springcloud-gateway</module>
+		<module>ozx-shop-basics-xxl-sso-server</module>
 	</modules>
 
 
